@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <header>
+        <title>integraMoip | Moip Pagamentos S.A.</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link href="css/prettify.css" type="text/css" rel="stylesheet" />
+        <link rel="shortcut icon" href="img/palheta_moip.jpg" type="image/x-icon" />
+    </header>
+
+    <body>
+
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <b><a class="brand" href="index.html">integraMoip</a></b>
+                <ul class="nav">
+                    <li class="divider-vertical"></li>
+                    <li><a href="#">Home</a></li>
+                    <li class="active"><a href="#">Requisi&ccedil;&otilde;es API</a></li>
+                    <li><a href="#">Top Rameladores</a></li>
+                    <li><a href="#">Top Rameladas</a></li>
+                    <li><a href="#">Integradores</a></li>
+                    <li class="divider-vertical"></li>
+                </ul>
+                <a class="navbar-text pull-right">
+                    labs.moip.com.br  
+                    <img src="img/moip.png" width="60" height="32" style="padding: 5px"/>                
+                </a>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span1">&nbsp;</div>
+        <div class="span10">
+
+            <div class="page-header">
+                <ul class="breadcrumb">
+                    <li><a href="index.html" title="home"><i class="icon-home"></i></a><span class="divider">>></span></li>
+                    <li class="active">requisi&ccedil;&otilde;es api</li>
+                </ul>
+                <h1>Busca por requisi&ccedil;&otilde;es</h1>
+            </div>
+
+            <div id="page-body">
+
+                <ul id="tabs" class="nav nav-tabs">
+                    <li><a href="#instrucao" data-toggle="tab">instru&ccedil;&atilde;o</a></li>
+                    <li><a href="#transparente" data-toggle="tab">transparente</a></li>
+                    <li><a href="#recorrente" data-toggle="tab">recorrente</a></li>
+                </ul>
+
+                <div id="myTabContent" class="tab-content">
+
+                    <div class="tab-pane fade" id="instrucao">
+                        <h3>Buscar XML de Instru&ccedil;&atilde;o</h3>
+                        <br>
+                        <form class="well form-search">
+                            <input type="text" class="input-medium" placeholder="id pr&oacute;prio">
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                        </form>
+
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>data</th>
+                                    <th>integrador</th>
+                                    <th>id pr&oacute;prio</th>
+                                    <th>email comprador</th>
+                                    <th>valor</th>
+                                    <th>raz&atilde;o</th>
+                                    <th>tipo</th>
+                                    <th>ver detalhe</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01/04/2012 13:54:03</td>
+                                    <td>airu</td>
+                                    <td>129846912</td>
+                                    <td>mauro.kobayashi@moip.com.br</td>
+                                    <td>R$39,99</td>
+                                    <td>Pano de prato tricolor</td>
+                                    <td>
+                                        <span class="label label-info">Pagamento Direto</span>
+                                    </td>
+                                    <td>
+                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#tag"><code>&lt;tag&gt;</code></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>01/04/2012 14:10:45</td>
+                                    <td>jeffsports</td>
+                                    <td>129846234</td>
+                                    <td>caioab@gmail.com</td>
+                                    <td>R$39,99</td>
+                                    <td>Pantufa da Hanna Montana</td>
+                                    <td>
+                                        <span class="label label-inverse">Instru&ccedil;&atilde;o &Uacute;nica</span>
+                                    </td>
+                                    <td>
+                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#tag"><code>&lt;tag&gt;</code></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02/04/2012 21:11:18</td>
+                                    <td>airu</td>
+                                    <td>1298467654</td>
+                                    <td>vava@karametadefanclub.com.br</td>
+                                    <td>R$39,99</td>
+                                    <td>Guardanapo do Vav&aacute;</td>
+                                    <td>
+                                        <span class="label label-info">Pagamento Direto</span>
+                                    </td>
+                                    <td>
+                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#tag"><code>&lt;tag&gt;</code></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02/04/2012 21:11:18</td>
+                                    <td>jeffsports</td>
+                                    <td>129846112</td>
+                                    <td>daniel@moip.com.br</td>
+                                    <td>R$39,99</td>
+                                    <td>Regatinha da M&aacute;fia Azul</td>
+                                    <td>
+                                        <span class="label label-inverse">Instru&ccedil;&atilde;o &Uacute;nica</span>
+                                    </td>
+                                    <td>
+                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#tag"><code>&lt;tag&gt;</code></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02/04/2012 23:34:55</td>
+                                    <td>airu</td>
+                                    <td>129846009</td>
+                                    <td>vitao@comedordemelao.com.br</td>
+                                    <td>R$39,99</td>
+                                    <td>Mel&atilde;o de borracha</td>
+                                    <td>
+                                        <span class="label label-info">Pagamento Direto</span>
+                                    </td>
+                                    <td>
+                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#tag"><code>&lt;tag&gt;</code></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>02/04/2012 23:55:55</td>
+                                    <td>estapar</td>
+                                    <td>mens2309</td>
+                                    <td>mauro@pilotodefuga.com.br</td>
+                                    <td>R$300,00</td>
+                                    <td>Mensalidade agosto/12</td>
+                                    <td>
+                                        <span class="label label-warning">Instru&ccedil;&atilde;o Recorrente</span>
+                                    </td>
+                                    <td>
+                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#tag"><code>&lt;tag&gt;</code></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="pagination pagination-right">
+                            <ul>
+                                <li><a href="#"><<</a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">>></a></li>
+                            </ul>
+                        </div>
+    
+                        <div id="xml" class="modal hide fade">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">&times;</button>
+                                <h3>XML Instru&ccedil;&atilde;o</h3>
+                                <span class="label label-info">Pagamento Direto</span>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Recebido em: 01/04/2012 13:54:03</h4>
+                                <code class="prettyprint lang-html">
+                                    <p>
+                                        <br>&lt;EnviarInstrucao&gt;<br>
+                                            &lt;InstrucaoUnica&gt;<br>
+                                                &lt;Razao&gt;Pagamento para loja X&lt;/Razao&gt;<br>
+                                                &lt;Valores&gt;<br>
+                                                    &lt;Valor moeda="BRL"&gt;1.00&lt;/Valor&gt;<br>
+                                                &lt;/Valores&gt;<br>
+                                                &lt;IdProprio&gt;MEU_ID_UNICO&lt;/IdProprio&gt;<br>
+                                                &lt;Pagador&gt;<br>
+                                                    &lt;Nome&gt;Cliente Sobrenome&lt;/Nome&gt;<br>
+                                                    &lt;Email&gt;login@meudominio.com.br&lt;/Email&gt;<br>
+                                                    &lt;IdPagador&gt;MEU_CLIENTE_ID&lt;/IdPagador&gt;<br>
+                                                    &lt;EnderecoCobranca&gt;<br>
+                                                        &lt;Logradouro&gt;Av. Brigadeiro Faria Lima&lt;/Logradouro&gt;<br>
+                                                        &lt;Numero&gt;2927&lt;/Numero&gt;<br>
+                                                        &lt;Complemento&gt;8° Andar&lt;/Complemento&gt;<br>
+                                                        &lt;Bairro&gt;Jardim Paulistao&lt;/Bairro&gt;<br>
+                                                        &lt;Cidade&gt;Sao Paulo&lt;/Cidade&gt;<br>
+                                                        &lt;Estado&gt;SP&lt;/Estado&gt;<br>
+                                                        &lt;Pais&gt;BRA&lt;/Pais&gt;<br>
+                                                        &lt;CEP&gt;01452-000&lt;/CEP&gt;<br>
+                                                        &lt;TelefoneFixo&gt;(11)3165-4020&lt;/TelefoneFixo&gt;<br>
+                                                    &lt;/EnderecoCobranca&gt;<br>
+                                                &lt;/Pagador&gt;<br>
+                                                &lt;Parcelamentos&gt;<br>
+                                                    &lt;Parcelamento&gt;<br>
+                                                        &lt;MinimoParcelas&gt;2&lt;/MinimoParcelas&gt;<br>
+                                                        &lt;MaximoParcelas&gt;2&lt;/MaximoParcelas&gt;<br>
+                                                        &lt;Juros&gt;1.99&lt;/Juros&gt;<br>
+                                                    &lt;/Parcelamento&gt;<br>
+                                                    &lt;Parcelamento&gt;<br>
+                                                        &lt;MinimoParcelas&gt;3&lt;/MinimoParcelas&gt;<br>
+                                                        &lt;MaximoParcelas&gt;4&lt;/MaximoParcelas&gt;<br>
+                                                        &lt;Juros&gt;0&lt;/Juros&gt;<br>
+                                                    &lt;/Parcelamento&gt;<br>
+                                                    &lt;Parcelamento&gt;<br>
+                                                        &lt;MinimoParcelas&gt;5&lt;/MinimoParcelas&gt;<br>
+                                                        &lt;MaximoParcelas&gt;6&lt;/MaximoParcelas&gt;<br>
+                                                        &lt;Repassar&gt;true&lt;/Repassar&gt;<br>
+                                                    &lt;/Parcelamento&gt;<br>
+                                                    &lt;Parcelamento&gt;<br>
+                                                        &lt;MinimoParcelas&gt;7&lt;/MinimoParcelas&gt;<br>
+                                                        &lt;MaximoParcelas&gt;12&lt;/MaximoParcelas&gt;<br>
+                                                        &lt;Juros&gt;10.00&lt;/Juros&gt;<br>
+                                                    &lt;/Parcelamento&gt;<br>
+                                                &lt;/Parcelamentos&gt;<br>
+                                            &lt;/InstrucaoUnica&gt;<br>
+                                        &lt;/EnviarInstrucao&gt;
+                                    </p>
+                                </code>
+                            </div>
+                            <div class="modal-footer">
+                              <a href="#" class="btn btn-danger" data-dismiss="modal" >Fechar</a>
+                            </div>
+                        </div>
+
+
+                        <div id="tag" class="modal hide fade">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">&times;</button>
+                                <h3>Tags da Instru&ccedil;&atilde;o</h3>
+                                <span class="label label-info">Pagamento Direto</span>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Recebido em: 01/04/2012 13:54:03</h4>
+                                <br>
+                                    <table class="table table-condensed">
+                                        <thead>
+                                            <tr>
+                                                <th>tag</th>
+                                                <th>valor</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>&lt;Razao&gt;</td>
+                                                <td>Pagamento para loja X</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&lt;Valor&gt;</td>
+                                                <td>1.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&lt;IdProprio&gt;</td>
+                                                <td>MEU_ID_UNICO</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&lt;Nome&gt;</td>
+                                                <td>Cliente Sobrenome</td>
+                                            </tr>
+                                                <td>&lt;etc&gt;</td>
+                                                <td>...</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </code>
+                            </div>
+                            <div class="modal-footer">
+                              <a href="#" class="btn btn-danger" data-dismiss="modal" >Fechar</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="tab-pane fade" id="transparente">
+                        <h3>em constru&ccedil;&atilde;o...</h3>
+                    </div>
+
+
+                    <div class="tab-pane fade" id="recorrente">
+                        <h3>em constru&ccedil;&atilde;o...</h3>
+                    </div>
+                </div>
+                <hr>
+          </div>
+          <div class="span1">&nbsp;</div>
+
+    </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/config-moip.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/prettify.js"></script>
+  </body>
+</html>
