@@ -8,3 +8,4 @@
 # Temporary Files #
 *~
 *.~
+.DS_Store
