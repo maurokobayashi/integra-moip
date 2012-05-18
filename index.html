@@ -66,14 +66,14 @@
             <div id="page-body">
 
                 <ul id="tabs" class="nav nav-tabs">
-                    <li><a href="#instrucao" data-toggle="tab">instru&ccedil;&atilde;o</a></li>
+                    <li class="active"><a href="#instrucao" data-toggle="tab">instru&ccedil;&atilde;o</a></li>
                     <li><a href="#transparente" data-toggle="tab">transparente</a></li>
                     <li><a href="#recorrente" data-toggle="tab">recorrente</a></li>
                 </ul>
 
-                <div id="myTabContent" class="tab-content">
+                <div id="tabContentBody" class="tab-content">
 
-                    <div class="tab-pane fade" id="instrucao">
+                    <div class="tab-pane active" id="instrucao">
                         <h3>Buscar XML de Instru&ccedil;&atilde;o</h3>
                         <br>
                         <form class="well form-search">
@@ -98,7 +98,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#requisicao-detalhe"><code>&lt;xml&gt;</code></a>
                                     </td>
                                     <td>01/04/2012 13:54:03</td>
                                     <td>uria</td>
@@ -112,7 +112,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#requisicao-detalhe"><code>&lt;xml&gt;</code></a>
                                     </td>
                                     <td>01/04/2012 14:10:45</td>
                                     <td>skaffsports</td>
@@ -126,7 +126,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#requisicao-detalhe"><code>&lt;xml&gt;</code></a>
                                     </td>
                                     <td>02/04/2012 21:11:18</td>
                                     <td>uria</td>
@@ -140,7 +140,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#requisicao-detalhe"><code>&lt;xml&gt;</code></a>
                                     </td>
                                     <td>02/04/2012 21:11:18</td>
                                     <td>skaffsports</td>
@@ -154,7 +154,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#requisicao-detalhe"><code>&lt;xml&gt;</code></a>
                                     </td>
                                     <td>02/04/2012 23:34:55</td>
                                     <td>uria</td>
@@ -168,7 +168,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <a data-toggle="modal" href="#xml"><code>&lt;xml&gt;</code></a>
+                                        <a data-toggle="modal" href="#requisicao-detalhe"><code>&lt;xml&gt;</code></a>
                                     </td>
                                     <td>02/04/2012 23:55:55</td>
                                     <td>estaimpar</td>
@@ -194,106 +194,113 @@
                             </ul>
                         </div>
                         
-                        <div id="xml" class="modal hide fade">
+                        <div id="requisicao-detalhe" class="modal hide fade">
+                            
                             <div class="modal-header">
                                 <button class="close" data-dismiss="modal">&times;</button>
                                 <h3>XML Instru&ccedil;&atilde;o</h3>
                                 <span class="label label-info">Pagamento Direto</span>
                             </div>
+
                             <div class="modal-body">
-                            	<ul id="tabs" class="nav nav-tabs">
-                    				<li class="active"><a href="#xml" data-toggle="tab">xml</a></li>
-                   		 			<li><a href="#tag" data-toggle="tab">tag</a></li>
+                            	<ul id="nav-tabs-detalhe" class="nav nav-tabs">
+                    				<li class="active"><a href="#xml-detalhe" data-toggle="tab">xml</a></li>
+                   		 			<li><a href="#tag-detalhe" data-toggle="tab">tag</a></li>
                 				</ul>
+
+                                <div id="tab-content-detalhe" class="tab-content">
                 		
-                				<div class="tab-pane fade" id="xml">
-                                	<h4>Recebido em: 01/04/2012 13:54:03</h4>
-                                	<code class="prettyprint lang-html">
-                                    <p>
-                                        <br>&lt;EnviarInstrucao&gt;<br>
-                                            &lt;InstrucaoUnica&gt;<br>
-                                                &lt;Razao&gt;Pagamento para loja X&lt;/Razao&gt;<br>
-                                                &lt;Valores&gt;<br>
-                                                    &lt;Valor moeda="BRL"&gt;1.00&lt;/Valor&gt;<br>
-                                                &lt;/Valores&gt;<br>
-                                                &lt;IdProprio&gt;MEU_ID_UNICO&lt;/IdProprio&gt;<br>
-                                                &lt;Pagador&gt;<br>
-                                                    &lt;Nome&gt;Cliente Sobrenome&lt;/Nome&gt;<br>
-                                                    &lt;Email&gt;login@meudominio.com.br&lt;/Email&gt;<br>
-                                                    &lt;IdPagador&gt;MEU_CLIENTE_ID&lt;/IdPagador&gt;<br>
-                                                    &lt;EnderecoCobranca&gt;<br>
-                                                        &lt;Logradouro&gt;Av. Brigadeiro Faria Lima&lt;/Logradouro&gt;<br>
-                                                        &lt;Numero&gt;2927&lt;/Numero&gt;<br>
-                                                        &lt;Complemento&gt;8° Andar&lt;/Complemento&gt;<br>
-                                                        &lt;Bairro&gt;Jardim Paulistao&lt;/Bairro&gt;<br>
-                                                        &lt;Cidade&gt;Sao Paulo&lt;/Cidade&gt;<br>
-                                                        &lt;Estado&gt;SP&lt;/Estado&gt;<br>
-                                                        &lt;Pais&gt;BRA&lt;/Pais&gt;<br>
-                                                        &lt;CEP&gt;01452-000&lt;/CEP&gt;<br>
-                                                        &lt;TelefoneFixo&gt;(11)3165-4020&lt;/TelefoneFixo&gt;<br>
-                                                    &lt;/EnderecoCobranca&gt;<br>
-                                                &lt;/Pagador&gt;<br>
-                                                &lt;Parcelamentos&gt;<br>
-                                                    &lt;Parcelamento&gt;<br>
-                                                        &lt;MinimoParcelas&gt;2&lt;/MinimoParcelas&gt;<br>
-                                                        &lt;MaximoParcelas&gt;2&lt;/MaximoParcelas&gt;<br>
-                                                        &lt;Juros&gt;1.99&lt;/Juros&gt;<br>
-                                                    &lt;/Parcelamento&gt;<br>
-                                                    &lt;Parcelamento&gt;<br>
-                                                        &lt;MinimoParcelas&gt;3&lt;/MinimoParcelas&gt;<br>
-                                                        &lt;MaximoParcelas&gt;4&lt;/MaximoParcelas&gt;<br>
-                                                        &lt;Juros&gt;0&lt;/Juros&gt;<br>
-                                                    &lt;/Parcelamento&gt;<br>
-                                                    &lt;Parcelamento&gt;<br>
-                                                        &lt;MinimoParcelas&gt;5&lt;/MinimoParcelas&gt;<br>
-                                                        &lt;MaximoParcelas&gt;6&lt;/MaximoParcelas&gt;<br>
-                                                        &lt;Repassar&gt;true&lt;/Repassar&gt;<br>
-                                                    &lt;/Parcelamento&gt;<br>
-                                                    &lt;Parcelamento&gt;<br>
-                                                        &lt;MinimoParcelas&gt;7&lt;/MinimoParcelas&gt;<br>
-                                                        &lt;MaximoParcelas&gt;12&lt;/MaximoParcelas&gt;<br>
-                                                        &lt;Juros&gt;10.00&lt;/Juros&gt;<br>
-                                                    &lt;/Parcelamento&gt;<br>
-                                                &lt;/Parcelamentos&gt;<br>
-                                            &lt;/InstrucaoUnica&gt;<br>
-                                        &lt;/EnviarInstrucao&gt;
-                                    </p>
-                                	</code>
-                                </div>
-                                <div class="tab-pane fade" id="tag">
-                                	<h4>Recebido em: 01/04/2012 13:54:03</h4>
-                                	<br>
-                                    <table class="table table-condensed">
-                                        <thead>
-                                            <tr>
-                                                <th>tag</th>
-                                                <th>valor</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>&lt;Razao&gt;</td>
-                                                <td>Pagamento para loja X</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&lt;Valor&gt;</td>
-                                                <td>1.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&lt;IdProprio&gt;</td>
-                                                <td>MEU_ID_UNICO</td>
-                                            </tr>
-                                            <tr>
-                                                <td>&lt;Nome&gt;</td>
-                                                <td>Cliente Sobrenome</td>
-                                            </tr>
-                                                <td>&lt;etc&gt;</td>
-                                                <td>...</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                    				<div class="tab-pane active" id="xml-detalhe">
+                                    	<h4>Recebido em: 01/04/2012 13:54:03</h4>
+                                        <code class="prettyprint lang-html">
+                                            <p>
+                                                <br>&lt;EnviarInstrucao&gt;<br>
+                                                    &lt;InstrucaoUnica&gt;<br>
+                                                        &lt;Razao&gt;Pagamento para loja X&lt;/Razao&gt;<br>
+                                                        &lt;Valores&gt;<br>
+                                                            &lt;Valor moeda="BRL"&gt;1.00&lt;/Valor&gt;<br>
+                                                        &lt;/Valores&gt;<br>
+                                                        &lt;IdProprio&gt;MEU_ID_UNICO&lt;/IdProprio&gt;<br>
+                                                        &lt;Pagador&gt;<br>
+                                                            &lt;Nome&gt;Cliente Sobrenome&lt;/Nome&gt;<br>
+                                                            &lt;Email&gt;login@meudominio.com.br&lt;/Email&gt;<br>
+                                                            &lt;IdPagador&gt;MEU_CLIENTE_ID&lt;/IdPagador&gt;<br>
+                                                            &lt;EnderecoCobranca&gt;<br>
+                                                                &lt;Logradouro&gt;Av. Brigadeiro Faria Lima&lt;/Logradouro&gt;<br>
+                                                                &lt;Numero&gt;2927&lt;/Numero&gt;<br>
+                                                                &lt;Complemento&gt;8° Andar&lt;/Complemento&gt;<br>
+                                                                &lt;Bairro&gt;Jardim Paulistao&lt;/Bairro&gt;<br>
+                                                                &lt;Cidade&gt;Sao Paulo&lt;/Cidade&gt;<br>
+                                                                &lt;Estado&gt;SP&lt;/Estado&gt;<br>
+                                                                &lt;Pais&gt;BRA&lt;/Pais&gt;<br>
+                                                                &lt;CEP&gt;01452-000&lt;/CEP&gt;<br>
+                                                                &lt;TelefoneFixo&gt;(11)3165-4020&lt;/TelefoneFixo&gt;<br>
+                                                            &lt;/EnderecoCobranca&gt;<br>
+                                                        &lt;/Pagador&gt;<br>
+                                                        &lt;Parcelamentos&gt;<br>
+                                                            &lt;Parcelamento&gt;<br>
+                                                                &lt;MinimoParcelas&gt;2&lt;/MinimoParcelas&gt;<br>
+                                                                &lt;MaximoParcelas&gt;2&lt;/MaximoParcelas&gt;<br>
+                                                                &lt;Juros&gt;1.99&lt;/Juros&gt;<br>
+                                                            &lt;/Parcelamento&gt;<br>
+                                                            &lt;Parcelamento&gt;<br>
+                                                                &lt;MinimoParcelas&gt;3&lt;/MinimoParcelas&gt;<br>
+                                                                &lt;MaximoParcelas&gt;4&lt;/MaximoParcelas&gt;<br>
+                                                                &lt;Juros&gt;0&lt;/Juros&gt;<br>
+                                                            &lt;/Parcelamento&gt;<br>
+                                                            &lt;Parcelamento&gt;<br>
+                                                                &lt;MinimoParcelas&gt;5&lt;/MinimoParcelas&gt;<br>
+                                                                &lt;MaximoParcelas&gt;6&lt;/MaximoParcelas&gt;<br>
+                                                                &lt;Repassar&gt;true&lt;/Repassar&gt;<br>
+                                                            &lt;/Parcelamento&gt;<br>
+                                                            &lt;Parcelamento&gt;<br>
+                                                                &lt;MinimoParcelas&gt;7&lt;/MinimoParcelas&gt;<br>
+                                                                &lt;MaximoParcelas&gt;12&lt;/MaximoParcelas&gt;<br>
+                                                                &lt;Juros&gt;10.00&lt;/Juros&gt;<br>
+                                                            &lt;/Parcelamento&gt;<br>
+                                                        &lt;/Parcelamentos&gt;<br>
+                                                    &lt;/InstrucaoUnica&gt;<br>
+                                                &lt;/EnviarInstrucao&gt;
+                                            </p>
+                                    	</code>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="tag-detalhe">
+                                    	<h4>Recebido em: 01/04/2012 13:54:03</h4>
+                                        <br>
+                                        <table class="table table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th>tag</th>
+                                                    <th>valor</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>&lt;Razao&gt;</td>
+                                                    <td>Pagamento para loja X</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&lt;Valor&gt;</td>
+                                                    <td>1.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&lt;IdProprio&gt;</td>
+                                                    <td>MEU_ID_UNICO</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&lt;Nome&gt;</td>
+                                                    <td>Cliente Sobrenome</td>
+                                                </tr>
+                                                    <td>&lt;etc&gt;</td>
+                                                    <td>...</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><!--tab-content-->
+                            </div><!--modal-body-->
+
                             <div class="modal-footer">
                               <a href="#" class="btn btn-danger" data-dismiss="modal" >Fechar</a>
                             </div>
