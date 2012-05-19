@@ -9,17 +9,26 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         
         <script type="text/javascript">
+        
+			var conf = {
+				url: "http://maurokobayashi.github.com/integra-moip/examples/instrucao_unica_xml.txt",
+				type: "GET",
+				dataType: "jsonp",
+				callback: "jsonp"
+			};
+			
+			$.ajax(conf);
             
-            $.getJSON("examples/instrucao_unica_xml.txt",
-                function(data){
-                    var instrucao_detalhe = '';
-                    
-                    instrucao_detalhe += '<code class="prettyprint lang-html">';
-                    instrucao_detalhe += data.instrucao_unica_xml;
-                    instrucao_detalhe += '</code>';
-                    
-					$("#xml-detahe").html(instrucao_detalhe);
-            });
+            function jsonp(data) {
+            
+				var instrucao_detalhe = '';     
+				instrucao_detalhe += '<code class="prettyprint lang-html">';
+				instrucao_detalhe += data.instrucao_unica_xml;
+				instrucao_detalhe += '</code>';
+				 
+				$("#xml-detalhe").html(instrucao_detalhe);
+            }
+
         </script>
     </header>
 
@@ -225,7 +234,8 @@
 
                                 <div id="tab-content-detalhe" class="tab-content">
                 		
-                    				<div class="tab-pane active" id="xml-detalhe">
+                    				<div id="xml-detalhe" class="tab-pane active">
+
                                         <code class="prettyprint lang-html">
                                             <p>
                                                 &lt;EnviarInstrucao&gt;<br>
