@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <header>
+    <head>
         <title>integraMoip | Moip Pagamentos S.A.</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-        <link href="css/prettify.css" type="text/css" rel="stylesheet" />
         <link rel="shortcut icon" href="img/palheta_moip.jpg" type="image/x-icon" />
         <script type="text/javascript" src="js/jquery.js"></script>
         
@@ -21,16 +20,13 @@
             
             function jsonp(data) {
             
-				var instrucao_detalhe = '';     
-				instrucao_detalhe += '<code class="prettyprint lang-html">';
-				instrucao_detalhe += data.instrucao_unica_xml;
-				instrucao_detalhe += '</code>';
+				var instrucao_detalhe = data.instrucao_unica_xml;
 				 
 				$("#xml-detalhe").html(instrucao_detalhe);
             }
 
         </script>
-    </header>
+    </head>
 
     <body>
 
