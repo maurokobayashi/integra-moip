@@ -1,0 +1,51 @@
+{"instrucao_unica_xml":
+	"<p>
+		&lt;EnviarInstrucao&gt;<br>
+			&lt;InstrucaoUnica&gt;<br>
+				&lt;Razao&gt;Pagamento para loja X&lt;/Razao&gt;<br>
+				&lt;Valores&gt;<br>
+					&lt;Valor&gt;1.00&lt;/Valor&gt;<br>
+				&lt;/Valores&gt;<br>
+				&lt;IdProprio&gt;MEU_ID_UNICO&lt;/IdProprio&gt;<br>
+				&lt;Pagador&gt;<br>
+					&lt;Nome&gt;Cliente Sobrenome&lt;/Nome&gt;<br>
+					&lt;Email&gt;login@meudominio.com.br&lt;/Email&gt;<br>
+					&lt;IdPagador&gt;MEU_CLIENTE_ID&lt;/IdPagador&gt;<br>
+					&lt;EnderecoCobranca&gt;<br>
+						&lt;Logradouro&gt;Av. Brigadeiro Faria Lima&lt;/Logradouro&gt;<br>
+						&lt;Numero&gt;2927&lt;/Numero&gt;<br>
+						&lt;Complemento&gt;8° Andar&lt;/Complemento&gt;<br>
+						&lt;Bairro&gt;Jardim Paulistao&lt;/Bairro&gt;<br>
+						&lt;Cidade&gt;Sao Paulo&lt;/Cidade&gt;<br>
+						&lt;Estado&gt;SP&lt;/Estado&gt;<br>
+						&lt;Pais&gt;BRA&lt;/Pais&gt;<br>
+						&lt;CEP&gt;01452-000&lt;/CEP&gt;<br>
+						&lt;TelefoneFixo&gt;(11)3165-4020&lt;/TelefoneFixo&gt;<br>
+					&lt;/EnderecoCobranca&gt;<br>
+				&lt;/Pagador&gt;<br>
+				&lt;Parcelamentos&gt;<br>
+					&lt;Parcelamento&gt;<br>
+						&lt;MinimoParcelas&gt;2&lt;/MinimoParcelas&gt;<br>
+						&lt;MaximoParcelas&gt;2&lt;/MaximoParcelas&gt;<br>
+						&lt;Juros&gt;1.99&lt;/Juros&gt;<br>
+					&lt;/Parcelamento&gt;<br>
+					&lt;Parcelamento&gt;<br>
+						&lt;MinimoParcelas&gt;3&lt;/MinimoParcelas&gt;<br>
+						&lt;MaximoParcelas&gt;4&lt;/MaximoParcelas&gt;<br>
+						&lt;Juros&gt;0&lt;/Juros&gt;<br>
+					&lt;/Parcelamento&gt;<br>
+					&lt;Parcelamento&gt;<br>
+						&lt;MinimoParcelas&gt;5&lt;/MinimoParcelas&gt;<br>
+						&lt;MaximoParcelas&gt;6&lt;/MaximoParcelas&gt;<br>
+						&lt;Repassar&gt;true&lt;/Repassar&gt;<br>
+					&lt;/Parcelamento&gt;<br>
+					&lt;Parcelamento&gt;<br>
+						&lt;MinimoParcelas&gt;7&lt;/MinimoParcelas&gt;<br>
+						&lt;MaximoParcelas&gt;12&lt;/MaximoParcelas&gt;<br>
+						&lt;Juros&gt;10.00&lt;/Juros&gt;<br>
+					&lt;/Parcelamento&gt;<br>
+				&lt;/Parcelamentos&gt;<br>
+			&lt;/InstrucaoUnica&gt;<br>
+		&lt;/EnviarInstrucao&gt;
+	</p>"
+}

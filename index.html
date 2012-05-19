@@ -6,6 +6,20 @@
         <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
         <link href="css/prettify.css" type="text/css" rel="stylesheet" />
         <link rel="shortcut icon" href="img/palheta_moip.jpg" type="image/x-icon" />
+        
+        <script type="text/javascript">
+            
+            $.getJSON("examples/instrucao_unica_xml.txt",
+                function(data){
+                    var instrucao_detalhe = '';
+                    
+                    instrucao_detalhe += '<code class="prettyprint lang-html">';
+                    instrucao_detalhe += data.instrucao_unica_xml;
+                    instrucao_detalhe += '</code>';
+                    
+					$("#xml-detahe").html(instrucao_detalhe);
+            });
+        </script>
     </header>
 
     <body>
@@ -198,7 +212,7 @@
                             
                             <div class="modal-header">
                                 <button class="close" data-dismiss="modal">&times;</button>
-                                <h3>XML Instru&ccedil;&atilde;o</h3>
+                                <h3>XML Instru&ccedil;&atilde;o - Recebido em: 01/04/2012 13:54:03</h3>
                                 <span class="label label-info">Pagamento Direto</span>
                             </div>
 
@@ -211,12 +225,11 @@
                                 <div id="tab-content-detalhe" class="tab-content">
                 		
                     				<div class="tab-pane active" id="xml-detalhe">
-                                    	<h4>Recebido em: 01/04/2012 13:54:03</h4>
                                         <code class="prettyprint lang-html">
                                             <p>
-                                                <br>&lt;EnviarInstrucao&gt;<br>
+                                                &lt;EnviarInstrucao&gt;<br>
                                                     &lt;InstrucaoUnica&gt;<br>
-                                                        &lt;Razao&gt;Pagamento para loja X&lt;/Razao&gt;<br>
+                                                        &lt;Razao&gt;Pagamento hardcoded da loja X&lt;/Razao&gt;<br>
                                                         &lt;Valores&gt;<br>
                                                             &lt;Valor moeda="BRL"&gt;1.00&lt;/Valor&gt;<br>
                                                         &lt;/Valores&gt;<br>
@@ -266,8 +279,6 @@
                                     </div>
 
                                     <div class="tab-pane fade" id="tag-detalhe">
-                                    	<h4>Recebido em: 01/04/2012 13:54:03</h4>
-                                        <br>
                                         <table class="table table-condensed">
                                             <thead>
                                                 <tr>
